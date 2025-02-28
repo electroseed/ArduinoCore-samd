@@ -5,7 +5,7 @@
 This repository contains the source code and configuration files of the Arduino Core
 for Atmel's SAMD21 and SAMD51 processor (used on the Arduino/Genuino Zero, MKR1000 and MKRZero boards).
 
-In particular, this adds support for the Adafruit SAMD Boards such as the Feather M0
+In particular, this adds support for the ElectroSeed SAMD Boards
 
 ## Bugs or Issues
 
