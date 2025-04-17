@@ -59,6 +59,14 @@
 #endif
 #endif
 
+#ifndef USB_BCD_
+#ifdef BCD_DEVICE
+#define USB_BCD_ ((USB_BCD & 0xfff) | ((BCD_DEVICE & 0xf) <<12))
+#else
+#define USB_BCD_ USB_BCD
+#endif
+#endif
+
 #ifndef USB_MANUFACTURER
 #ifdef BOARD_MANUFACTURER
 #define USB_MANUFACTURER BOARD_MANUFACTURER
@@ -175,7 +183,7 @@ void Adafruit_USBD_Device::clearConfiguration(void) {
                                            CFG_TUD_ENDPOINT0_SIZE,
                                        .idVendor = USB_VID,
                                        .idProduct = USB_PID,
-                                       .bcdDevice = 0x0100,
+                                       .bcdDevice = USB_BCD_,
                                        .iManufacturer = STRID_MANUFACTURER,
                                        .iProduct = STRID_PRODUCT,
                                        .iSerialNumber = STRID_SERIAL,
