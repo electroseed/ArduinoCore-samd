@@ -1,0 +1,220 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+menu.cache=Cache
+menu.speed=CPU Speed
+menu.opt=Optimize
+menu.maxqspi=Max QSPI
+menu.usbstack=USB Stack
+menu.debug=Debug
+
+
+# ElectroSeed Tiny SamD21 M2
+# ------------------------------
+es_tiny_samd21_m2.name=ElectroSeed Tiny SamD21 M2
+es_tiny_samd21_m2.vid.0=0x04D8
+es_tiny_samd21_m2.pid.0=0xE667
+es_tiny_samd21_m2.vid.1=0x04D8
+es_tiny_samd21_m2.pid.1=0x0667
+es_tiny_samd21_m2.upload.tool=bossac
+es_tiny_samd21_m2.upload.protocol=sam-ba
+es_tiny_samd21_m2.upload.maximum_size=262144
+es_tiny_samd21_m2.upload.offset=0x2000
+es_tiny_samd21_m2.upload.use_1200bps_touch=true
+es_tiny_samd21_m2.upload.wait_for_upload_port=true
+es_tiny_samd21_m2.upload.native_usb=true
+es_tiny_samd21_m2.build.mcu=cortex-m0plus
+es_tiny_samd21_m2.build.f_cpu=48000000L
+es_tiny_samd21_m2.build.usb_product="ElectroSeed Tiny SamD21 M2"
+es_tiny_samd21_m2.build.usb_manufacturer="ElectroSeed"
+es_tiny_samd21_m2.build.board=es_tiny_samd21_m2
+es_tiny_samd21_m2.build.core=arduino
+es_tiny_samd21_m2.build.extra_flags=-DES_TINY_SAMD21_M2 -D__SAMD21G18A__ -D__SAMD21__ -DARM_MATH_CM0PLUS {build.usb_flags}
+es_tiny_samd21_m2.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+es_tiny_samd21_m2.build.openocdscript=openocd_scripts/trinket_m0.cfg
+es_tiny_samd21_m2.build.variant=es_tiny_samd21_m2
+es_tiny_samd21_m2.build.variant_system_lib=
+es_tiny_samd21_m2.build.vid=0x04D8
+es_tiny_samd21_m2.build.pid=0xE667
+es_tiny_samd21_m2.build.bcd=0x100
+es_tiny_samd21_m2.bootloader.tool=openocd
+es_tiny_samd21_m2.bootloader.file=es_tiny_samd21_m2/update-bootloader-es_tiny_samd21_m2.bin
+es_tiny_samd21_m2.menu.opt.small=Small (-Os) (standard)
+es_tiny_samd21_m2.menu.opt.small.build.flags.optimize=-Os
+es_tiny_samd21_m2.menu.opt.fast=Fast (-O2)
+es_tiny_samd21_m2.menu.opt.fast.build.flags.optimize=-O2
+es_tiny_samd21_m2.menu.opt.faster=Faster (-O3)
+es_tiny_samd21_m2.menu.opt.faster.build.flags.optimize=-O3
+es_tiny_samd21_m2.menu.opt.fastest=Fastest (-Ofast)
+es_tiny_samd21_m2.menu.opt.fastest.build.flags.optimize=-Ofast
+es_tiny_samd21_m2.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+es_tiny_samd21_m2.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+es_tiny_samd21_m2.menu.usbstack.arduino=Arduino
+es_tiny_samd21_m2.menu.usbstack.tinyusb=TinyUSB
+es_tiny_samd21_m2.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+es_tiny_samd21_m2.menu.debug.off=Off
+es_tiny_samd21_m2.menu.debug.off.build.flags.debug=
+es_tiny_samd21_m2.menu.debug.on=On
+es_tiny_samd21_m2.menu.debug.on.build.flags.debug=-g
+
+# ElectroSeed SamD21 WB
+# ------------------------------
+electroseed_samd21_wb.name=ElectroSeed SamD21 WB
+electroseed_samd21_wb.vid.0=0x04D8
+electroseed_samd21_wb.pid.0=0xE666
+electroseed_samd21_wb.vid.1=0x04D8
+electroseed_samd21_wb.pid.1=0x0666
+electroseed_samd21_wb.upload.tool=bossac
+electroseed_samd21_wb.upload.protocol=sam-ba
+electroseed_samd21_wb.upload.maximum_size=262144
+electroseed_samd21_wb.upload.offset=0x2000
+electroseed_samd21_wb.upload.use_1200bps_touch=true
+electroseed_samd21_wb.upload.wait_for_upload_port=true
+electroseed_samd21_wb.upload.native_usb=true
+electroseed_samd21_wb.upload.encrypt=true
+electroseed_samd21_wb.build.mcu=cortex-m0plus
+electroseed_samd21_wb.build.f_cpu=48000000L
+electroseed_samd21_wb.build.usb_product="ElectroSeed SamD21 WB"
+electroseed_samd21_wb.build.usb_manufacturer="ElectroSeed"
+electroseed_samd21_wb.build.board=ES_SAMD21_WB
+electroseed_samd21_wb.build.core=arduino
+electroseed_samd21_wb.build.extra_flags=-DCRYSTALLESS -DES_SAMD21_WB -D__SAMD21G18A__ -D__SAMD21__ -DARM_MATH_CM0PLUS {build.usb_flags}
+electroseed_samd21_wb.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+electroseed_samd21_wb.build.openocdscript=openocd_scripts/trinket_m0.cfg
+electroseed_samd21_wb.build.variant=es_samd21_wb
+electroseed_samd21_wb.build.variant_system_lib=
+electroseed_samd21_wb.build.vid=0x04D8
+electroseed_samd21_wb.build.pid=0xE666
+electroseed_samd21_wb.build.bcd=0x100
+electroseed_samd21_wb.bootloader.tool=openocd
+electroseed_samd21_wb.bootloader.file=es_samd21_wb_usb/update-bootloader-es_samd21_wb_usb.bin
+electroseed_samd21_wb.menu.opt.small=Small (-Os) (standard)
+electroseed_samd21_wb.menu.opt.small.build.flags.optimize=-Os
+electroseed_samd21_wb.menu.opt.fast=Fast (-O2)
+electroseed_samd21_wb.menu.opt.fast.build.flags.optimize=-O2
+electroseed_samd21_wb.menu.opt.faster=Faster (-O3)
+electroseed_samd21_wb.menu.opt.faster.build.flags.optimize=-O3
+electroseed_samd21_wb.menu.opt.fastest=Fastest (-Ofast)
+electroseed_samd21_wb.menu.opt.fastest.build.flags.optimize=-Ofast
+electroseed_samd21_wb.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+electroseed_samd21_wb.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+electroseed_samd21_wb.menu.usbstack.arduino=Arduino
+electroseed_samd21_wb.menu.usbstack.tinyusb=TinyUSB
+electroseed_samd21_wb.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+electroseed_samd21_wb.menu.debug.off=Off
+electroseed_samd21_wb.menu.debug.off.build.flags.debug=
+electroseed_samd21_wb.menu.debug.on=On
+electroseed_samd21_wb.menu.debug.on.build.flags.debug=-g
+
+# Micromod SAMD21
+# ------------------------------
+micromod_samd21.name=Micromod SamD21
+micromod_samd21.vid.0=0x4D8
+micromod_samd21.pid.0=0xE665
+micromod_samd21.vid.1=0x4D8
+micromod_samd21.pid.1=0x0665
+micromod_samd21.upload.tool=bossac
+micromod_samd21.upload.protocol=sam-ba
+micromod_samd21.upload.maximum_size=262144
+micromod_samd21.upload.offset=0x2000
+micromod_samd21.upload.use_1200bps_touch=true
+micromod_samd21.upload.wait_for_upload_port=true
+micromod_samd21.upload.native_usb=true
+micromod_samd21.upload.encrypt=true
+micromod_samd21.build.mcu=cortex-m0plus
+micromod_samd21.build.f_cpu=48000000L
+micromod_samd21.build.usb_product="Micromod SamD21"
+micromod_samd21.build.usb_manufacturer="ElectroSeed"
+micromod_samd21.build.board=MICROMOD_SAMD21
+micromod_samd21.build.core=arduino
+micromod_samd21.build.extra_flags=-DCRYSTALLESS -D__SAMD21G18A__ -D__SAMD21__ -DMICROMOD_SAMD21 -DARM_MATH_CM0PLUS {build.usb_flags}
+micromod_samd21.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+micromod_samd21.build.openocdscript=openocd_scripts/metro_m0.cfg
+micromod_samd21.build.variant=MICROMOD_SAMD21
+micromod_samd21.build.variant_system_lib=
+micromod_samd21.build.vid=0x4D8
+micromod_samd21.build.pid=0xE665
+micromod_samd21.build.bcd=0x405
+micromod_samd21.bootloader.tool=openocd
+micromod_samd21.bootloader.file=micromod_samd21/update-bootloader-micromod_samd21.bin
+micromod_samd21.menu.opt.small=Small (-Os) (standard)
+micromod_samd21.menu.opt.small.build.flags.optimize=-Os
+micromod_samd21.menu.opt.fast=Fast (-O2)
+micromod_samd21.menu.opt.fast.build.flags.optimize=-O2
+micromod_samd21.menu.opt.faster=Faster (-O3)
+micromod_samd21.menu.opt.faster.build.flags.optimize=-O3
+micromod_samd21.menu.opt.fastest=Fastest (-Ofast)
+micromod_samd21.menu.opt.fastest.build.flags.optimize=-Ofast
+micromod_samd21.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+micromod_samd21.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+micromod_samd21.menu.usbstack.arduino=Arduino
+micromod_samd21.menu.usbstack.arduino.build.flags.usbstack=
+micromod_samd21.menu.usbstack.tinyusb=TinyUSB
+micromod_samd21.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+micromod_samd21.menu.debug.off=Off
+micromod_samd21.menu.debug.off.build.flags.debug=
+micromod_samd21.menu.debug.on=On
+micromod_samd21.menu.debug.on.build.flags.debug=-g
+
+# Micromod SAMD21J
+# ------------------------------
+micromod_samd21j.name=Micromod SamD21J
+micromod_samd21j.vid.0=0x04D8
+micromod_samd21j.pid.0=0xE616
+micromod_samd21j.vid.1=0x04D8
+micromod_samd21j.pid.1=0x0616
+micromod_samd21j.upload.tool=bossac
+micromod_samd21j.upload.protocol=sam-ba
+micromod_samd21j.upload.maximum_size=262144
+micromod_samd21j.upload.offset=0x2000
+micromod_samd21j.upload.use_1200bps_touch=true
+micromod_samd21j.upload.wait_for_upload_port=true
+micromod_samd21j.upload.native_usb=true
+micromod_samd21j.upload.encrypt=true
+micromod_samd21j.build.mcu=cortex-m0plus
+micromod_samd21j.build.f_cpu=48000000L
+micromod_samd21j.build.usb_product="Micromod SamD21J"
+micromod_samd21j.build.usb_manufacturer="ElectroSeed"
+micromod_samd21j.build.board=MICROMOD_SAMD21J
+micromod_samd21j.build.core=arduino
+micromod_samd21j.build.extra_flags=-DCRYSTALLESS -D__SAMD21J18A__ -D__SAMD21__ -DMICROMOD_SAMD21J -DARM_MATH_CM0PLUS {build.usb_flags}
+micromod_samd21j.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+micromod_samd21j.build.openocdscript=openocd_scripts/metro_m0.cfg
+micromod_samd21j.build.variant=micromod_samd21j
+micromod_samd21j.build.variant_system_lib=
+micromod_samd21j.build.vid=0x04D8
+micromod_samd21j.build.pid=0xE616
+micromod_samd21j.build.bcd=0x405
+micromod_samd21j.bootloader.tool=openocd
+micromod_samd21j.bootloader.file=micromod_samd21j/update-bootloader-micromod_samd21j.bin
+micromod_samd21j.menu.opt.small=Small (-Os) (standard)
+micromod_samd21j.menu.opt.small.build.flags.optimize=-Os
+micromod_samd21j.menu.opt.fast=Fast (-O2)
+micromod_samd21j.menu.opt.fast.build.flags.optimize=-O2
+micromod_samd21j.menu.opt.faster=Faster (-O3)
+micromod_samd21j.menu.opt.faster.build.flags.optimize=-O3
+micromod_samd21j.menu.opt.fastest=Fastest (-Ofast)
+micromod_samd21j.menu.opt.fastest.build.flags.optimize=-Ofast
+micromod_samd21j.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+micromod_samd21j.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+micromod_samd21j.menu.usbstack.arduino=Arduino
+micromod_samd21j.menu.usbstack.arduino.build.flags.usbstack=
+micromod_samd21j.menu.usbstack.tinyusb=TinyUSB
+micromod_samd21j.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+micromod_samd21j.menu.debug.off=Off
+micromod_samd21j.menu.debug.off.build.flags.debug=
+micromod_samd21j.menu.debug.on=On
+micromod_samd21j.menu.debug.on.build.flags.debug=-g
