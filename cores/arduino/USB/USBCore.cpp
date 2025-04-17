@@ -84,10 +84,13 @@ const uint8_t STRING_PRODUCT[] = USB_PRODUCT;
 
 const uint8_t STRING_MANUFACTURER[] = USB_MANUFACTURER;
 
+#ifndef USB_BCD
+#define USB_BCD	0x100
+#endif
 
 //	DEVICE DESCRIPTOR
-const DeviceDescriptor USB_DeviceDescriptorB = D_DEVICE(0xEF, 0x02, 0x01, 64, USB_VID, USB_PID, 0x100, IMANUFACTURER, IPRODUCT, ISERIAL, 1);
-const DeviceDescriptor USB_DeviceDescriptor = D_DEVICE(0x00, 0x00, 0x00, 64, USB_VID, USB_PID, 0x100, IMANUFACTURER, IPRODUCT, ISERIAL, 1);
+const DeviceDescriptor USB_DeviceDescriptorB = D_DEVICE(0xEF, 0x02, 0x01, 64, USB_VID, USB_PID, USB_BCD, IMANUFACTURER, IPRODUCT, ISERIAL, 1);
+const DeviceDescriptor USB_DeviceDescriptor = D_DEVICE(0x00, 0x00, 0x00, 64, USB_VID, USB_PID, USB_BCD, IMANUFACTURER, IPRODUCT, ISERIAL, 1);
 
 //==================================================================
 
